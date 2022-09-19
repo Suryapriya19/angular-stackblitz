@@ -2,13 +2,15 @@
 <div *ngFor="let product of products">
   <h3>
     <a [title]="product.name + ' details'">
-    {{ product.name }}
-  </a>
+      {{ product.name }}
+    </a>
   </h3>
-  <p *ngIf='product.description; else elsepart'>
-    Description:{{product.description}}
+  <p *ngIf="product.description; else elsepart">
+    Description:{{ product.description }}
   </p>
-  <ng-template #elsepart> Description: None </ng-template>
+  <ng-template #elsepart> Description: None 
+  </ng-template>
+  <button (click)="share()">share</button>
 </div>
 
 <!-- 
